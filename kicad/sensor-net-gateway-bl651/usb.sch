@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 4 5
 Title ""
 Date ""
 Rev ""
@@ -121,7 +121,7 @@ U 1 1 5D686DC5
 P 7350 2700
 F 0 "C4" H 7232 2654 50  0000 R CNN
 F 1 "4.7µF" H 7232 2745 50  0000 R CNN
-F 2 "WurthElektronik:865080640004" H 7388 2550 50  0001 C CNN
+F 2 "HH_WurthElektronik:865080640004" H 7388 2550 50  0001 C CNN
 F 3 "https://katalog.we-online.de/pbs/datasheet/865080640004.pdf" H 7350 2700 50  0001 C CNN
 F 4 "732-8449-1-ND" H 7350 2700 50  0001 C CNN "DigiKey_PartNumber"
 F 5 "Wurth Electronics Inc." H 7350 2700 50  0001 C CNN "Manufacturer"

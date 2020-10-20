@@ -354,6 +354,25 @@ X OUT/USBDP 6 750 150 200 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
+# HH_Sensirion_SHTC3
+#
+DEF HH_Sensirion_SHTC3 S 0 40 Y Y 1 F N
+F0 "S" 0 350 50 H V C CNN
+F1 "HH_Sensirion_SHTC3" 0 250 50 H V C CNN
+F2 "HH_Sensirion:SHTC3" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "1649-1105-1-ND" 0 0 50 H I C CNN "Digi-Key Part Number"
+F5 "Sensirion AG" 0 0 50 H I C CNN "Manufacturer"
+F6 "SHTC3" 0 0 50 H I C CNN "Manufacturer Part Number"
+DRAW
+S -250 200 250 -200 0 1 0 N
+X VDD 1 -450 100 200 R 50 50 0 0 W
+X SCL 2 -450 -100 200 R 50 50 0 0 B
+X SDA 3 450 -100 200 L 50 50 0 0 B
+X VSS 4 450 100 200 L 50 50 0 0 W
+ENDDRAW
+ENDDEF
+#
 # Interface_USB_FT230XQ
 #
 DEF Interface_USB_FT230XQ U 0 20 Y Y 1 F N
@@ -383,6 +402,21 @@ X USBDP 6 -700 0 150 R 50 50 1 1 B
 X USBDM 7 -700 100 150 R 50 50 1 1 B
 X 3V3OUT 8 -700 400 150 R 50 50 1 1 w
 X ~RESET 9 -700 -200 150 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Mechanical_MountingHole
+#
+DEF Mechanical_MountingHole H 0 40 Y Y 1 F N
+F0 "H" 0 200 50 H V C CNN
+F1 "Mechanical_MountingHole" 0 125 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ MountingHole*
+$ENDFPLIST
+DRAW
+C 0 0 50 0 1 50 N
 ENDDRAW
 ENDDEF
 #
