@@ -17,6 +17,8 @@ $Comp
 L HH_Laird:BL651 BL1
 U 1 1 5F8C7148
 P 5700 2900
+AR Path="/5F8C7148" Ref="BL1"  Part="1" 
+AR Path="/5F8C705B/5F8C7148" Ref="BL1"  Part="1" 
 F 0 "BL1" H 5700 3915 50  0000 C CNN
 F 1 "BL651" H 5700 3824 50  0000 C CNN
 F 2 "HH_Laird:BL651" V 4900 3300 50  0001 C CNN
@@ -97,23 +99,21 @@ F 3 "~" H 4850 4450 50  0001 C CNN
 	1    4850 4450
 	0    1    1    0   
 $EndComp
-Text Label 6600 2950 0    50   ~ 0
-SWO
 Text Label 6600 2750 0    50   ~ 0
 ~RESET
 Text Label 6600 2650 0    50   ~ 0
 SWDCLK
 Text Label 6600 2550 0    50   ~ 0
 SWDIO
-Text Label 4800 2650 2    50   ~ 0
+Text Label 4800 3250 2    50   ~ 0
 SPI_CLK
-Text Label 4800 2750 2    50   ~ 0
+Text Label 4800 2950 2    50   ~ 0
 I2C_SDA
 Text Label 4800 2850 2    50   ~ 0
 I2C_SCL
-Text Label 6600 2250 0    50   ~ 0
+Text Label 4800 3050 2    50   ~ 0
 SPI_MISO
-Text Label 6600 2350 0    50   ~ 0
+Text Label 4800 3150 2    50   ~ 0
 SPI_MOSI
 Wire Wire Line
 	5300 4050 5300 4450
@@ -215,52 +215,6 @@ Wire Wire Line
 Wire Wire Line
 	5700 5850 5700 5650
 Connection ~ 5450 5850
-$Comp
-L HH_ARM:CORTEX-DEBUG CD1
-U 1 1 5F8E0A93
-P 9450 2800
-F 0 "CD1" H 9450 3387 60  0000 C CNN
-F 1 "CORTEX-DEBUG" H 9450 3281 60  0000 C CNN
-F 2 "HH_CNCTech:CORTEX-DEBUG" H 9450 2800 60  0001 C CNN
-F 3 "" H 9450 2800 60  0001 C CNN
-	1    9450 2800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0106
-U 1 1 5F8E1A6E
-P 8600 3250
-F 0 "#PWR0106" H 8600 3000 50  0001 C CNN
-F 1 "GND" H 8605 3077 50  0000 C CNN
-F 2 "" H 8600 3250 50  0001 C CNN
-F 3 "" H 8600 3250 50  0001 C CNN
-	1    8600 3250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8800 2700 8600 2700
-Wire Wire Line
-	8600 2700 8600 2800
-Wire Wire Line
-	8800 3000 8600 3000
-Connection ~ 8600 3000
-Wire Wire Line
-	8600 3000 8600 3250
-Wire Wire Line
-	8800 2800 8600 2800
-Connection ~ 8600 2800
-Wire Wire Line
-	8600 2800 8600 3000
-Text HLabel 8800 2600 0    50   Input ~ 0
-VDD
-Text Label 10100 2600 0    50   ~ 0
-SWDIO
-Text Label 10100 2700 0    50   ~ 0
-SWDCLK
-Text Label 10100 3000 0    50   ~ 0
-~RESET
-Text Label 10100 2800 0    50   ~ 0
-SWO
 $Comp
 L HH_CnK:PTS526_SM15_SMTR2_LFS SW1
 U 1 1 5F8E9ABE
@@ -368,84 +322,76 @@ Text Label 2950 4950 0    50   ~ 0
 GPIO_2
 Text Label 1650 4950 2    50   ~ 0
 GPIO_1
-Text Label 4800 2950 2    50   ~ 0
+Text Label 4800 3350 2    50   ~ 0
 ~SPI_CS
-Text Label 4800 3150 2    50   ~ 0
+Text Label 4800 3450 2    50   ~ 0
 GPIO_2
-Text Label 4800 3050 2    50   ~ 0
+Text Label 4800 2750 2    50   ~ 0
 GPIO_1
-Text HLabel 9350 4100 0    50   Input ~ 0
+Text HLabel 9200 2500 0    50   Input ~ 0
 VDD
-Text Label 9350 4200 2    50   ~ 0
+Text Label 9200 2600 2    50   ~ 0
 ~RESET
 $Comp
 L power:GND #PWR0109
 U 1 1 5F9167AA
-P 8950 4400
-F 0 "#PWR0109" H 8950 4150 50  0001 C CNN
-F 1 "GND" H 8955 4227 50  0000 C CNN
-F 2 "" H 8950 4400 50  0001 C CNN
-F 3 "" H 8950 4400 50  0001 C CNN
-	1    8950 4400
+P 8800 2800
+F 0 "#PWR0109" H 8800 2550 50  0001 C CNN
+F 1 "GND" H 8805 2627 50  0000 C CNN
+F 2 "" H 8800 2800 50  0001 C CNN
+F 3 "" H 8800 2800 50  0001 C CNN
+	1    8800 2800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8950 4400 8950 4300
+	8800 2800 8800 2700
 Wire Wire Line
-	8950 4300 9350 4300
-Text Label 9350 4400 2    50   ~ 0
+	8800 2700 9200 2700
+Text Label 9200 2800 2    50   ~ 0
 SWDCLK
-Text Label 9350 4500 2    50   ~ 0
+Text Label 9200 2900 2    50   ~ 0
 SWDIO
-Text HLabel 9350 5350 0    50   Input ~ 0
-UART_RX
-Text HLabel 9350 5250 0    50   Input ~ 0
-UART_TX
 $Comp
 L power:GND #PWR0110
 U 1 1 5F91986A
-P 8800 5550
-F 0 "#PWR0110" H 8800 5300 50  0001 C CNN
-F 1 "GND" H 8805 5377 50  0000 C CNN
-F 2 "" H 8800 5550 50  0001 C CNN
-F 3 "" H 8800 5550 50  0001 C CNN
-	1    8800 5550
+P 8650 3950
+F 0 "#PWR0110" H 8650 3700 50  0001 C CNN
+F 1 "GND" H 8655 3777 50  0000 C CNN
+F 2 "" H 8650 3950 50  0001 C CNN
+F 3 "" H 8650 3950 50  0001 C CNN
+	1    8650 3950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8800 5550 8800 5450
+	8650 3950 8650 3850
 Wire Wire Line
-	8800 5450 9350 5450
-Text HLabel 9350 5550 0    50   Input ~ 0
-UART_CTS
-Text HLabel 9350 5650 0    50   Input ~ 0
-UART_RTS
+	8650 3850 9200 3850
 $Comp
 L HH_Harwin:M50-3130545 M1
 U 1 1 5F920E82
-P 9650 4300
-F 0 "M1" H 9778 4346 50  0000 L CNN
-F 1 "M50-3130545" H 9778 4255 50  0000 L CNN
-F 2 "HH_Harwin:M50-3130545" H 9650 3400 50  0001 C CNN
-F 3 "https://cdn.harwin.com/pdfs/M50-313.pdf" H 9650 3500 50  0001 C CNN
-F 4 "952-3585-ND" H 9650 3800 50  0001 C CNN "DigiKey_PartNumber"
-F 5 "Harwin Inc." H 9650 3700 50  0001 C CNN "Manufacturer"
-F 6 "M50-3130545" H 9650 3600 50  0001 C CNN "Manufacturer_PartNumber"
-	1    9650 4300
+P 9500 2700
+F 0 "M1" H 9628 2746 50  0000 L CNN
+F 1 "M50-3130545" H 9628 2655 50  0000 L CNN
+F 2 "HH_Harwin:M50-3130545" H 9500 1800 50  0001 C CNN
+F 3 "https://cdn.harwin.com/pdfs/M50-313.pdf" H 9500 1900 50  0001 C CNN
+F 4 "952-3585-ND" H 9500 2200 50  0001 C CNN "DigiKey_PartNumber"
+F 5 "Harwin Inc." H 9500 2100 50  0001 C CNN "Manufacturer"
+F 6 "M50-3130545" H 9500 2000 50  0001 C CNN "Manufacturer_PartNumber"
+	1    9500 2700
 	1    0    0    -1  
 $EndComp
 $Comp
 L HH_Harwin:M50-3130545 M2
 U 1 1 5F9214B1
-P 9650 5450
-F 0 "M2" H 9778 5496 50  0000 L CNN
-F 1 "M50-3130545" H 9778 5405 50  0000 L CNN
-F 2 "HH_Harwin:M50-3130545" H 9650 4550 50  0001 C CNN
-F 3 "https://cdn.harwin.com/pdfs/M50-313.pdf" H 9650 4650 50  0001 C CNN
-F 4 "952-3585-ND" H 9650 4950 50  0001 C CNN "DigiKey_PartNumber"
-F 5 "Harwin Inc." H 9650 4850 50  0001 C CNN "Manufacturer"
-F 6 "M50-3130545" H 9650 4750 50  0001 C CNN "Manufacturer_PartNumber"
-	1    9650 5450
+P 9500 3850
+F 0 "M2" H 9628 3896 50  0000 L CNN
+F 1 "M50-3130545" H 9628 3805 50  0000 L CNN
+F 2 "HH_Harwin:M50-3130545" H 9500 2950 50  0001 C CNN
+F 3 "https://cdn.harwin.com/pdfs/M50-313.pdf" H 9500 3050 50  0001 C CNN
+F 4 "952-3585-ND" H 9500 3350 50  0001 C CNN "DigiKey_PartNumber"
+F 5 "Harwin Inc." H 9500 3250 50  0001 C CNN "Manufacturer"
+F 6 "M50-3130545" H 9500 3150 50  0001 C CNN "Manufacturer_PartNumber"
+	1    9500 3850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -513,9 +459,9 @@ Text Label 3950 6550 0    50   ~ 0
 LED_RED
 Text Label 3950 6750 0    50   ~ 0
 LED_GREEN
-Text Label 4800 3350 2    50   ~ 0
+Text Label 6600 2250 0    50   ~ 0
 LED_GREEN
-Text Label 4800 3250 2    50   ~ 0
+Text Label 6600 2350 0    50   ~ 0
 LED_RED
 Text Notes 3050 6050 2    100  ~ 20
 Indicator LED
@@ -527,15 +473,15 @@ Text Notes 5850 1700 2    100  ~ 20
 MCU
 Text Notes 10050 2000 2    100  ~ 20
 Debug Connectors
-Text HLabel 6600 3250 2    50   Input ~ 0
-FTDI_DIO0
 Text HLabel 6600 3350 2    50   Input ~ 0
+FTDI_DIO0
+Text HLabel 6600 3250 2    50   Input ~ 0
 FTDI_DIO1
-Text HLabel 6600 3450 2    50   Input ~ 0
-FTDI_DIO2
 Text HLabel 6600 3550 2    50   Input ~ 0
+FTDI_DIO2
+Text HLabel 6600 3450 2    50   Input ~ 0
 FTDI_DIO3
-Text HLabel 4800 3450 0    50   Input ~ 0
+Text HLabel 4800 3650 0    50   Input ~ 0
 SENSOR.SCL
 Text HLabel 4800 3550 0    50   Input ~ 0
 SENSOR.SDA
@@ -544,7 +490,19 @@ NoConn ~ 6600 3050
 NoConn ~ 6600 2850
 NoConn ~ 6600 2450
 NoConn ~ 5600 4050
-NoConn ~ 5700 4050
-NoConn ~ 5800 4050
-NoConn ~ 4800 3650
+NoConn ~ 4800 2650
+Text HLabel 9200 3650 0    50   Input ~ 0
+VDD
+Text Label 6600 2950 0    50   ~ 0
+SWO
+Text Label 5700 4050 3    50   ~ 0
+UART2.RX
+Text Label 5800 4050 3    50   ~ 0
+UART2.TX
+Text Label 9200 3750 2    50   ~ 0
+SWO
+Text Label 9200 4050 2    50   ~ 0
+UART2.RX
+Text Label 9200 3950 2    50   ~ 0
+UART2.TX
 $EndSCHEMATC

@@ -27,8 +27,6 @@ F 6 "SHTC3" H 6100 3850 50  0001 C CNN "Manufacturer Part Number"
 	1    6100 3850
 	1    0    0    -1  
 $EndComp
-Text HLabel 6550 3750 2    50   Input ~ 0
-GND
 Text HLabel 5100 3750 0    50   Input ~ 0
 VDD
 $Comp
@@ -44,7 +42,7 @@ F 3 "~" H 5400 3900 50  0001 C CNN
 $EndComp
 Connection ~ 5400 3750
 Wire Wire Line
-	5400 3750 5650 3750
+	5400 3750 5550 3750
 $Comp
 L Device:R R5
 U 1 1 5F8FACDF
@@ -81,4 +79,40 @@ Wire Wire Line
 	5250 3750 5400 3750
 Wire Wire Line
 	5100 3750 5250 3750
+$Comp
+L Device:C C17
+U 1 1 5F9128D3
+P 6100 3200
+F 0 "C17" V 5848 3200 50  0000 C CNN
+F 1 "0.1µF" V 5939 3200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6138 3050 50  0001 C CNN
+F 3 "~" H 6100 3200 50  0001 C CNN
+	1    6100 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6250 3200 6550 3200
+Wire Wire Line
+	6550 3200 6550 3750
+Wire Wire Line
+	5950 3200 5550 3200
+Wire Wire Line
+	5550 3200 5550 3750
+Connection ~ 5550 3750
+Wire Wire Line
+	5550 3750 5650 3750
+$Comp
+L power:GND #PWR?
+U 1 1 5F95A865
+P 6700 3750
+F 0 "#PWR?" H 6700 3500 50  0001 C CNN
+F 1 "GND" H 6705 3577 50  0000 C CNN
+F 2 "" H 6700 3750 50  0001 C CNN
+F 3 "" H 6700 3750 50  0001 C CNN
+	1    6700 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 3750 6550 3750
+Connection ~ 6550 3750
 $EndSCHEMATC

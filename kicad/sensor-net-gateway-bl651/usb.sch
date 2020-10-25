@@ -25,7 +25,7 @@ F 3 "~" H 4000 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4000 4400 4000 4250
+	4000 4400 4000 4350
 $Comp
 L Device:C C2
 U 1 1 5D686D79
@@ -238,20 +238,6 @@ Wire Wire Line
 	8450 2700 8450 2950
 Wire Wire Line
 	9200 2700 9250 2700
-Text HLabel 9250 2100 2    50   Input ~ 0
-GND
-Text HLabel 9250 2700 2    50   Input ~ 0
-GND
-Text HLabel 8350 4600 3    50   Input ~ 0
-GND
-Text HLabel 7600 4800 3    50   Input ~ 0
-GND
-Text HLabel 6900 4700 3    50   Input ~ 0
-GND
-Text HLabel 4000 4400 3    50   Input ~ 0
-GND
-Text HLabel 6550 2500 0    50   Input ~ 0
-GND
 Wire Wire Line
 	7600 3250 7600 3650
 Wire Wire Line
@@ -271,10 +257,6 @@ Wire Wire Line
 Connection ~ 4000 3950
 Wire Wire Line
 	4000 3950 4550 3950
-Text HLabel 5550 3650 2    50   Input ~ 0
-GND
-Text HLabel 3600 3450 2    50   Input ~ 0
-GND
 Wire Wire Line
 	3600 3750 3950 3750
 Wire Wire Line
@@ -369,4 +351,94 @@ F 7 "FERRITE BEAD 600 OHM 0805 1LN" H 8250 2300 50  0001 C CNN "Description"
 $EndComp
 Text HLabel 9050 3950 2    50   Input ~ 0
 FTDI_DIO2
+Text Label 3850 3650 1    50   ~ 0
+D_P
+Text Label 3850 3750 3    50   ~ 0
+D_N
+$Comp
+L power:GND #PWR?
+U 1 1 5F95B5C0
+P 8350 4600
+F 0 "#PWR?" H 8350 4350 50  0001 C CNN
+F 1 "GND" H 8355 4427 50  0000 C CNN
+F 2 "" H 8350 4600 50  0001 C CNN
+F 3 "" H 8350 4600 50  0001 C CNN
+	1    8350 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F95B8AC
+P 7600 4800
+F 0 "#PWR?" H 7600 4550 50  0001 C CNN
+F 1 "GND" H 7605 4627 50  0000 C CNN
+F 2 "" H 7600 4800 50  0001 C CNN
+F 3 "" H 7600 4800 50  0001 C CNN
+	1    7600 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F95BDE8
+P 6900 4700
+F 0 "#PWR?" H 6900 4450 50  0001 C CNN
+F 1 "GND" H 6905 4527 50  0000 C CNN
+F 2 "" H 6900 4700 50  0001 C CNN
+F 3 "" H 6900 4700 50  0001 C CNN
+	1    6900 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F95C56F
+P 4000 4400
+F 0 "#PWR?" H 4000 4150 50  0001 C CNN
+F 1 "GND" H 4005 4227 50  0000 C CNN
+F 2 "" H 4000 4400 50  0001 C CNN
+F 3 "" H 4000 4400 50  0001 C CNN
+	1    4000 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 3450 3700 3450
+Wire Wire Line
+	3700 3450 3700 4350
+Wire Wire Line
+	3700 4350 4000 4350
+Connection ~ 4000 4350
+Wire Wire Line
+	4000 4350 4000 4250
+Wire Wire Line
+	5650 4350 5650 3650
+Wire Wire Line
+	5650 3650 5550 3650
+Wire Wire Line
+	4000 4350 5650 4350
+$Comp
+L power:GND #PWR?
+U 1 1 5F962756
+P 6550 2500
+F 0 "#PWR?" H 6550 2250 50  0001 C CNN
+F 1 "GND" H 6555 2327 50  0000 C CNN
+F 2 "" H 6550 2500 50  0001 C CNN
+F 3 "" H 6550 2500 50  0001 C CNN
+	1    6550 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F963429
+P 9250 2850
+F 0 "#PWR?" H 9250 2600 50  0001 C CNN
+F 1 "GND" H 9255 2677 50  0000 C CNN
+F 2 "" H 9250 2850 50  0001 C CNN
+F 3 "" H 9250 2850 50  0001 C CNN
+	1    9250 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 2100 9250 2700
+Wire Wire Line
+	9250 2700 9250 2850
+Connection ~ 9250 2700
 $EndSCHEMATC
