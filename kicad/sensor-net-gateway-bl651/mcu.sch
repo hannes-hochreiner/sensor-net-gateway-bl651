@@ -174,7 +174,11 @@ P 5200 5500
 F 0 "C15" H 5315 5546 50  0000 L CNN
 F 1 "9pF" H 5315 5455 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 5238 5350 50  0001 C CNN
-F 3 "~" H 5200 5500 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GP_NP0_16V-to-50V_18.pdf" H 5200 5500 50  0001 C CNN
+F 4 "311-3866-1-ND" H 5200 5500 50  0001 C CNN "Digi-Key Part Number"
+F 5 "Yageo" H 5200 5500 50  0001 C CNN "Manufacturer"
+F 6 "CC0603CRNPO9BN9R0" H 5200 5500 50  0001 C CNN "Manufacturer Part Number"
+F 7 "CAP CER 9PF 50V NPO 0603" H 5200 5500 50  0001 C CNN "Description"
 	1    5200 5500
 	1    0    0    -1  
 $EndComp
@@ -185,7 +189,11 @@ P 5700 5500
 F 0 "C16" H 5815 5546 50  0000 L CNN
 F 1 "9pF" H 5815 5455 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 5738 5350 50  0001 C CNN
-F 3 "~" H 5700 5500 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GP_NP0_16V-to-50V_18.pdf" H 5700 5500 50  0001 C CNN
+F 4 "311-3866-1-ND" H 5700 5500 50  0001 C CNN "Digi-Key Part Number"
+F 5 "Yageo" H 5700 5500 50  0001 C CNN "Manufacturer"
+F 6 "CC0603CRNPO9BN9R0" H 5700 5500 50  0001 C CNN "Manufacturer Part Number"
+F 7 "CAP CER 9PF 50V NPO 0603" H 5700 5500 50  0001 C CNN "Description"
 	1    5700 5500
 	1    0    0    -1  
 $EndComp
@@ -414,9 +422,13 @@ L Device:R R3
 U 1 1 5F924FDE
 P 3800 6550
 F 0 "R3" V 3593 6550 50  0000 C CNN
-F 1 "R" V 3684 6550 50  0000 C CNN
+F 1 "510" V 3684 6550 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 3730 6550 50  0001 C CNN
 F 3 "~" H 3800 6550 50  0001 C CNN
+F 4 "RR08P510DCT-ND" V 3800 6550 50  0001 C CNN "Digi-Key Part Number"
+F 5 "Susumu" V 3800 6550 50  0001 C CNN "Manufacturer"
+F 6 "RR0816P-511-D" V 3800 6550 50  0001 C CNN "Manufacturer Part Number"
+F 7 "RES SMD 510 OHM 0.5% 1/16W 0603" V 3800 6550 50  0001 C CNN "Description"
 	1    3800 6550
 	0    1    1    0   
 $EndComp
@@ -425,9 +437,13 @@ L Device:R R4
 U 1 1 5F9257BE
 P 3800 6750
 F 0 "R4" V 3593 6750 50  0000 C CNN
-F 1 "R" V 3684 6750 50  0000 C CNN
+F 1 "510" V 3684 6750 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 3730 6750 50  0001 C CNN
 F 3 "~" H 3800 6750 50  0001 C CNN
+F 4 "RR08P510DCT-ND" V 3800 6750 50  0001 C CNN "Digi-Key Part Number"
+F 5 "Susumu" V 3800 6750 50  0001 C CNN "Manufacturer"
+F 6 "RR0816P-511-D" V 3800 6750 50  0001 C CNN "Manufacturer Part Number"
+F 7 "RES SMD 510 OHM 0.5% 1/16W 0603" V 3800 6750 50  0001 C CNN "Description"
 	1    3800 6750
 	0    1    1    0   
 $EndComp
