@@ -16,6 +16,7 @@ use nrf52810_hal::prelude::_embedded_hal_blocking_delay_DelayMs;
 use core::fmt::Write;
 // use lsm303agr::{AccelOutputDataRate, Lsm303agr};
 use core::format_args;
+mod sht3;
 
 #[entry]
 fn main() -> ! {
@@ -24,7 +25,7 @@ fn main() -> ! {
     let cp = hal::pac::CorePeripherals::take().unwrap();
     let port0 = hal::gpio::p0::Parts::new(p.P0);
     let mut led_red = port0.p0_23.into_push_pull_output(Level::Low);
-    // let mut led_green = port0.p0_24.into_push_pull_output(Level::Low);
+    let mut led_green = port0.p0_24.into_push_pull_output(Level::Low);
     let mut delay = hal::delay::Delay::new(cp.SYST);
     let pins = hal::uarte::Pins {
         rxd: port0.p0_08.into_floating_input().degrade(),
@@ -39,29 +40,33 @@ fn main() -> ! {
     };
     let mut i2c = hal::twim::Twim::new(p.TWIM0, i2c_pins, hal::twim::Frequency::K400);
 
-    let com_meas : [u8; 2] = [0x78, 0x66];
-    let com_wakeup : [u8; 2] = [0x35, 0x17];
+    let mut sht3 = sht3::SHT3::new(&mut i2c, &mut delay);
+
+    sht3.init().unwrap();
+
+    // let com_meas : [u8; 2] = [0x78, 0x66];
+    // let com_wakeup : [u8; 2] = [0x35, 0x17];
     // let com_id : [u8; 2] = [0xEF, 0xC8];
-    let com_sleep : [u8; 2] = [0xB0, 0x98];
+    // let com_sleep : [u8; 2] = [0xB0, 0x98];
 
     loop {
-        let mut array: [u8; 6] = [0; 6];
-        // wake up
-        i2c.write(0x70, &com_wakeup).unwrap();
-        delay.delay_ms(1u32);
-        // start measurement
-        i2c.write(0x70, &com_meas).unwrap();
-        // wait 15 ms => max measurement time is 12.1 ms
-        delay.delay_ms(15u32);
-        // read measurement
-        i2c.read(0x70, &mut array).unwrap();
-        // sleep
-        i2c.write(0x70, &com_sleep).unwrap();
+        // let mut array: [u8; 6] = [0; 6];
+        // // wake up
+        // i2c.write(0x70, &com_wakeup).unwrap();
+        // delay.delay_ms(1u32);
+        // // start measurement
+        // i2c.write(0x70, &com_meas).unwrap();
+        // // wait 15 ms => max measurement time is 12.1 ms
+        // delay.delay_ms(15u32);
+        // // read measurement
+        // i2c.read(0x70, &mut array).unwrap();
+        // // sleep
+        // i2c.write(0x70, &com_sleep).unwrap();
 
-        let hum_array = [array[3], array[4]];
-        let hum = u16::from_be_bytes(hum_array) as f32 / 655.36;
-        let temp_array = [array[0], array[1]];
-        let temp = -45.0 + 0.00267028808594 * u16::from_be_bytes(temp_array) as f32;
+        // let hum_array = [array[3], array[4]];
+        // let hum = u16::from_be_bytes(hum_array) as f32 / 655.36;
+        // let temp_array = [array[0], array[1]];
+        // let temp = -45.0 + 0.00267028808594 * u16::from_be_bytes(temp_array) as f32;
         
         // led_red.set_high().unwrap();
         // delay.delay_ms(500u32);
@@ -79,9 +84,15 @@ fn main() -> ! {
         //     uart.write_fmt(format_args!("Acceleration: x {} y {} z {}\n", data.x, data.y, data.z)).unwrap();
         // }
         
+        // let (temp, hum) = sht3.get_measurement().unwrap();
+
         led_red.set_high().unwrap();
-        uart.write_fmt(format_args!("temp: {}\t hum: {}\n", temp, hum)).unwrap();
+        delay.delay_ms(10u32);
+        led_green.set_high().unwrap();
+        // uart.write_fmt(format_args!("temp: {}\t hum: {}\n", temp, hum)).unwrap();
         led_red.set_low().unwrap();
+        delay.delay_ms(10u32);
+        led_green.set_low().unwrap();
 
         // uart.write_str(&"test\n").unwrap();
         delay.delay_ms(1000u32);

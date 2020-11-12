@@ -262,6 +262,7 @@ dependencies = [
  "cortex-m",
  "cortex-m-rt",
  "cortex-m-semihosting",
+ "embedded-hal",
  "nrf52810-hal",
  "panic-halt",
 ]
