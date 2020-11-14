@@ -22,3 +22,8 @@ Functional Test
 +------------------+--------+
 | Sensor           | OK     |
 +------------------+--------+
+
+Firmware
+--------
+
+Firmware for this board can be found in the repository `"hannes-hochreiner/sensor-net-nrf52810-firmware" <https://github.com/hannes-hochreiner/sensor-net-nrf52810-firmware>`_
