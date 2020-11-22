@@ -1,4 +1,4 @@
-module mounting() {
+module box_mount() {
   difference() {
     polygon(points=[
           [-3,-3],
@@ -10,4 +10,4 @@ module mounting() {
   }
 }
 
-mounting();
+box_mount();
